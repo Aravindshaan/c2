@@ -6,7 +6,7 @@ pipeline {
         }
     parameters {
         string(name: 'aravind', defaultValue:'jenkins user',description: 'wellcome to jenkins')
-        password(name:'PASSWORD',defaultValueAsSecret:'encrypted',description:'enter password')
+        password(name:'PASSWORD',defaultValue:'encrypted',description:'enter password')
     }
     stages {
         stage('parameters') {
