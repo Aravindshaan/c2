@@ -1,16 +1,30 @@
 pipeline {
-        agent any
-        options {
+    agent any
+    options {
             timeout(time:1, unit:'HOURS')
         }
-        tools {
-            maven 'maven3.6.3'
-        }
-        stages {
-            stage('version') {
-                steps {
-                    sh 'mvn --version'
-                }
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building'
             }
-        } 
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying'
+            }
+        }
+    }
+    post {
+        always{
+            echo 'build always'
+        }
+    }
 }
+
