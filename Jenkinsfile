@@ -4,7 +4,7 @@ pipeline {
             timeout(time:1, unit:'HOURS')
         }
         tools {
-            maven 'apache-maven-3.8.4-bin.tar.gz'
+            maven 'maven3.6.3'
         }
         stages {
             stage('version') {
